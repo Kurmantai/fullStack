@@ -1,0 +1,89 @@
+.addMusicContainer {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 48%;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 200px;
+  height: 300px;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  animation: slideDown 0.5s forwards;
+
+  h3 {
+    color: white;
+  }
+
+  input {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    border: 0.1px solid white;
+  }
+
+  button {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    border: none !important;
+    border: 0.1px solid rgba(255, 255, 255, 0.386);
+  }
+
+  .add {
+    background-color: rgb(92, 255, 47);
+  }
+
+  .add:hover {
+    background-color: rgb(6, 194, 15);
+  }
+
+  .back {
+    background-color: rgb(232, 77, 77);
+  }
+
+  .back:hover {
+    background-color: rgb(194, 39, 39);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media all and (max-width: 430px) {
+  .addMusicContainer {
+    display: none;
+    position: absolute;
+    top: -1%;
+    left: 20%;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 200px;
+    height: 240px;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    animation: slideDown 0.5s forwards;
+
+    input {
+      font-size: 13px;
+    }
+  }
+}

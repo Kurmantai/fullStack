@@ -1,0 +1,340 @@
+.leftMenu {
+  // display: none;
+  width: 280px;
+  height: 100%;
+  min-height: 100vh;
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: #0e1111;
+  backdrop-filter: blur(8px);
+  padding-top: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.175.0.885, 0.32, 1.275);
+  z-index: 1;
+  border-right: 1px solid rgba(255, 255, 255, 0.194);
+
+  .logoContainer {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    i {
+      font-size: 30px;
+    }
+
+    i:nth-of-type(2) {
+      font-size: 20px !important;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+  }
+
+  .searchBox {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    margin-top: 20px;
+    color: #a0a0a0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+
+    input {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      outline: none;
+      border: none;
+      background-color: rgba(36, 37, 37, 0);
+      color: white;
+      font-size: 14px;
+    }
+    .searchIcon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #a0a0a0;
+
+      width: 45px;
+      height: 45px;
+      text-align: center;
+      line-height: 45px;
+      font-size: 20px;
+    }
+  }
+  .menuContainer {
+    margin: 25px 0px;
+
+    ul {
+      width: 100%;
+      padding: 0;
+      width: 100%;
+      padding: 5px 0px;
+      position: relative;
+
+      li:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: -15px;
+        width: 0px;
+        height: 90%;
+        background: #27fd01;
+        border-radius: 5px;
+      }
+
+      li:hover:before,
+      li.active::before {
+        width: 5px;
+        transition: 0.3s;
+      }
+      li {
+        list-style: none;
+        margin: 5px 0px;
+        width: 100%;
+        padding: 5px 0px;
+        position: relative;
+
+        a {
+          text-decoration: none;
+          color: #a0a0a0;
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          margin-right: 15px;
+
+          i {
+            font-size: 18px;
+            margin-right: 15px;
+          }
+        }
+        a:hover,
+        li.active:hover {
+          color: #f1f1f1;
+          transition: 0.3s;
+        }
+      }
+    }
+
+    .title {
+      color: #a0a0a0;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+  }
+
+  .playListContainer {
+    cursor: pointer;
+    margin: 15px 0px;
+
+    p {
+      color: #a0a0a0;
+      font-size: 12px;
+      font-weight: bold;
+
+      text-transform: uppercase;
+    }
+
+    .nameContainer {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+      color: #a0a0a0;
+      margin-bottom: 10px;
+
+      i {
+        cursor: pointer;
+        color: white;
+      }
+    }
+    .playList::-webkit-scrollbar {
+      width: 5px;
+    }
+    .playListScroll {
+      height: 140px;
+
+      overflow-y: scroll;
+
+      position: relative;
+      overflow-x: hidden;
+
+      .playList {
+        display: flex;
+        color: #a0a0a0;
+        align-items: center;
+        margin: 10px 0px;
+        p {
+          font-size: 16px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          display: inline;
+        }
+
+        i {
+          font-size: 18px;
+        }
+
+        p:hover {
+          color: #f1f1f1;
+          transition: 0.3s;
+        }
+        .list {
+          margin-right: 15px;
+        }
+        .trash {
+          margin-left: auto;
+        }
+      }
+
+      .playList:hover {
+        color: #f1f1f1;
+        transition: 0.3s;
+      }
+    }
+    // .playListScroll {
+    //   overflow: hidden; /* Скрыть скроллбар */
+    // }
+  }
+
+  .trackList {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+
+    .top {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 50px !important;
+      }
+
+      p {
+        margin-left: 15px;
+        color: #f1f1f1;
+        font-size: 14px;
+        span {
+          display: block;
+          font-size: 12px;
+          color: #a0a0a0;
+        }
+      }
+    }
+
+    .bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      color: #a0a0a0;
+      i {
+        font-size: 18px;
+      }
+      i:hover {
+        font-size: 18px;
+        color: #f1f1f1;
+        transition: 0.3s;
+      }
+
+      input {
+        position: relative;
+        height: 5px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+        appearance: none;
+      }
+      input::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        background-color: #27fd01;
+        width: 50%;
+        height: 100%;
+        border-radius: 10px;
+        z-index: 2;
+        transition: width 250ms linear;
+      }
+      input::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 10px;
+        height: 20px;
+        border-radius: 10px;
+        background-color: #f1f1f1;
+        border: 2px solid #000;
+        cursor: pointer;
+        position: relative;
+        margin: -2px 0 0 0;
+        z-index: 2;
+        box-sizing: border-box;
+        transition: all 250ms linear;
+      }
+
+      input::-moz-progress-bar {
+        background-color: #27fd01;
+        width: 50%;
+        height: 100%;
+        border-radius: 10px;
+        z-index: 2;
+        transition: width 250ms linear;
+      }
+
+      input::-moz-range-thumb {
+        background-color: #27fd01;
+        width: 50%;
+        height: 100%;
+        border-radius: 10px;
+        z-index: 2;
+        transition: width 250ms linear;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 550px) {
+  .leftMenu {
+    width: 64px;
+    min-width: 64px;
+
+    .searchBox {
+      display: none;
+    }
+
+    .trackList {
+      display: none;
+    }
+    .playListContainer {
+      display: none;
+    }
+
+    .menuContainer {
+      ul {
+        li {
+          margin: 25px 0px;
+          a {
+            span {
+              display: none;
+            }
+            i {
+              font-size: 26px;
+            }
+          }
+        }
+      }
+    }
+
+    .logoContainer {
+      h2 {
+        margin-left: 20px;
+      }
+    }
+  }
+}

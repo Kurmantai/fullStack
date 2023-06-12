@@ -1,0 +1,101 @@
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 20px 36px;
+
+  font-weight: 600;
+  font-size: 15px;
+  line-height: inherit;
+  font-family: inherit;
+  letter-spacing: 0.15em;
+  //   text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: #34dc3a;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: 0.2s;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    // background-color: #00ff80;
+    box-shadow: 0 0 12px #6cf170, 0 0 25px #34dc3a, 0 0 45px #34dc3a;
+    transition-delay: 1s;
+  }
+
+  &:active {
+    box-shadow: 0 0 8px #34dc3a, 0 0 12px #34dc3a, 0 0 18px #34dc3a;
+    transition-delay: 0s;
+  }
+}
+
+.button__line {
+  position: absolute;
+  border-radius: 2px;
+
+  &--top {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: translateX(-100%);
+    background-image: linear-gradient(to right, transparent, #34dc3a);
+
+    .button:hover &,
+    .button:focus & {
+      transform: translateX(100%);
+      transition: 1s 0.25s;
+    }
+  }
+
+  &--bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: translateX(100%);
+    background-image: linear-gradient(to left, transparent, #34dc3a);
+
+    .button:hover &,
+    .button:focus & {
+      transform: translateX(-100%);
+      transition: 1s 0.25s;
+    }
+  }
+
+  &--left {
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    transform: translateY(100%);
+    background-image: linear-gradient(to top, transparent, #34dc3a);
+
+    .button:hover &,
+    .button:focus & {
+      transform: translateY(-100%);
+      transition: 1s;
+    }
+  }
+
+  &--right {
+    bottom: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    transform: translateY(-100%);
+    background-image: linear-gradient(to bottom, transparent, #34dc3a);
+
+    .button:hover &,
+    .button:focus & {
+      transform: translateY(100%);
+      transition: 1s;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+const Songs = [
+  {
+    id: 1,
+    favourite: false,
+    songName: "Bella Ciao",
+    artist: "El Profesor",
+    song: "https://music.я.ws/song/58651-The-Weeknd-sacrifice",
+    imgSrc: "https://sefon.pro/img/artist_photos/timati.jpg",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elitdsadsada fadjaksjkdn.as flhakhdbasklhfvkajbdkajsfvbkhahhdaskldnasklfblahdksa/djklash;flash;bdljas;kdhgasiudgah.sdlk",
+  },
+  {
+    id: 2,
+    favourite: false,
+    songName: "Beast",
+    artist: "Anirudh Ravichander",
+    song: "https://sefon.pro/artist/89-egor-krid/",
+    imgSrc:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTvC-F3QHXLvKACby9cD5tIEVDUnyr5SKzJQ&usqp=CAU",
+  },
+  {
+    id: 3,
+    favourite: false,
+    songName: "Joker - Rock and Roll",
+    artist: "Hildur Guðnadóttir",
+    song: "https://sefon.pro/artist/89-egor-krid/",
+    imgSrc:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTvC-F3QHXLvKACby9cD5tIEVDUnyr5SKzJQ&usqp=CAU",
+  },
+  {
+    id: 4,
+    favourite: false,
+    songName: "I Am A Peaky Blinder",
+    artist: "Otnicka",
+    song: "https://sefon.pro/artist/89-egor-krid/",
+    imgSrc: "https://sefon.pro/img/artist_photos/timati.jpg",
+  },
+  {
+    id: 5,
+    favourite: false,
+    songName: "Naanga Vera Maari",
+    artist: "Yuvan Shankar Raja",
+    song: "https://sefon.pro/artist/89-egor-krid/",
+    imgSrc: "https://sefon.pro/img/artist_photos/timati.jpg",
+  },
+  {
+    id: 6,
+    songName: "Your Woman",
+    artist: "White Town",
+    song: "https://sefon.pro/artist/89-egor-krid/",
+    imgSrc: "https://sefon.pro/img/artist_photos/timati.jpg",
+  },
+  {
+    id: 7,
+    favourite: false,
+    songName: "Charlie",
+    artist: "Gopi Sundar",
+    song: "https://sefon.pro/artist/89-egor-krid/",
+    imgSrc: "https://sefon.pro/img/artist_photos/timati.jpg",
+  },
+  {
+    id: 8,
+    favourite: false,
+    songName: "Mask Off",
+    artist: "Future",
+    song: "https://sefon.pro/artist/89-egor-krid/",
+    imgSrc: "https://sefon.pro/img/artist_photos/timati.jpg",
+  },
+  {
+    id: 9,
+    favourite: false,
+    songName: "Hey Mama",
+    artist: "David Guetta",
+    song: "https://sefon.pro/artist/89-egor-krid/",
+    imgSrc: "https://sefon.pro/img/artist_photos/timati.jpg",
+  },
+  {
+    id: 10,
+    favourite: false,
+    songName: "Turkish Folk Battle Song",
+    artist: "CVR Toon ",
+    song: "https://sefon.pro/artist/89-egor-krid/",
+    imgSrc: "https://sefon.pro/img/artist_photos/timati.jpg",
+  },
+];
+
+export { Songs };

@@ -1,0 +1,434 @@
+.audioPageMainContainer {
+  width: 100%;
+  height: 100%;
+  .audioPageTop {
+    width: 100%;
+    height: 100%;
+    background-color: #171717;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .left {
+      width: 400px;
+      height: 270px;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    // .middle::-webkit-scrollbar {
+    //   width: 5px;
+    // }
+    .middle {
+      margin-left: 3%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .bg_img {
+        width: 100%;
+        height: 100%;
+      }
+      width: 600px;
+      height: 270px;
+      border-radius: 10px;
+
+      // overflow-y: scroll;
+      // overflow-x: hidden;
+
+      h3 {
+        text-align: center;
+      }
+    }
+    .right {
+      margin-top: 12px;
+      width: 400px;
+      height: 258px;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    .middleNav {
+      width: 100%;
+      height: 40px;
+      background: white;
+      box-shadow: 0 25px 40px rgba(255, 255, 255, 0.377);
+
+      z-index: 100;
+    }
+  }
+
+  .audioPageBottom {
+    // .middleNav {
+    //   display: block;
+    //   width: 100%;
+    //   height: 45px;
+    //   background-color: green;
+    // }
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(16, 16, 16, 1);
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .left {
+      position: relative;
+
+      .favoriteModal::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      .favoriteModal {
+        position: absolute;
+        top: 3.5%;
+        left: 2.3%;
+        right: 0;
+        bottom: 0;
+        // display: flex;
+        // align-items: flex-start !important;
+        // justify-content: center !important;
+        // flex-direction: column;
+        width: 330px !important;
+        height: 200px !important;
+        backdrop-filter: blur(10px);
+        background-color: transparent;
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
+      .trackList {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
+
+        .top {
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 50px !important;
+          }
+
+          p {
+            margin-left: 15px;
+            color: #f1f1f1;
+            font-size: 14px;
+            span {
+              display: block;
+              font-size: 12px;
+              color: #a0a0a0;
+            }
+          }
+        }
+
+        .bottom {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 20px;
+          color: #a0a0a0;
+          .i {
+            margin-right: 15px;
+          }
+
+          i {
+            margin-left: 10px;
+            font-size: 18px;
+          }
+          i:hover {
+            font-size: 18px;
+            color: #f1f1f1;
+            transition: 0.3s;
+          }
+
+          input {
+            position: relative;
+            height: 5px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            appearance: none;
+          }
+          input::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            background-color: #27fd01;
+            width: 50%;
+            height: 100%;
+            border-radius: 10px;
+            z-index: 2;
+            transition: width 250ms linear;
+          }
+          input::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 10px;
+            height: 20px;
+            border-radius: 10px;
+            background-color: #f1f1f1;
+            border: 2px solid #000;
+            cursor: pointer;
+            position: relative;
+            margin: -2px 0 0 0;
+            z-index: 2;
+            box-sizing: border-box;
+            transition: all 250ms linear;
+          }
+
+          input::-moz-progress-bar {
+            background-color: #27fd01;
+            width: 50%;
+            height: 100%;
+            border-radius: 10px;
+            z-index: 2;
+            transition: width 250ms linear;
+          }
+
+          input::-moz-range-thumb {
+            background-color: #27fd01;
+            width: 50%;
+            height: 100%;
+            border-radius: 10px;
+            z-index: 2;
+            transition: width 250ms linear;
+          }
+        }
+      }
+
+      width: 300px;
+      height: 400px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      h3 {
+        font-size: 25px;
+        color: white;
+        margin-bottom: 8px;
+      }
+
+      .AudioPageLists {
+        // position: relative;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .favorite_btn {
+          margin-top: 10px;
+        }
+
+        i,
+        p {
+          margin-top: 10px;
+          color: white;
+          cursor: pointer;
+        }
+        p:hover {
+          color: gray;
+        }
+        i {
+          margin-right: 15px;
+        }
+        // * {
+        //   font-size: 14px;
+        //   color: white;
+        //   cursor: pointer;
+        // }
+
+        // *:hover {
+        //   color: gray;
+        // }
+      }
+    }
+
+    .middleContainer {
+      position: relative;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .middle::-webkit-scrollbar {
+        width: 5px;
+      }
+      .middle {
+        width: 700px;
+        height: 300px;
+
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding: 5px;
+
+        .btnDiv {
+          width: 100%;
+
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+        }
+      }
+      .middleMusic {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 700px;
+        height: 100px;
+        background-color: rgb(255, 255, 255);
+      }
+    }
+    .right {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      width: 400px;
+      height: 400px;
+      background-color: rgba(16, 16, 16, 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      position: relative;
+
+      .topPlaylist {
+        margin: 5px 0;
+        display: flex;
+
+        .topRight {
+          margin-left: 5px;
+        }
+      }
+      .bottomPlaylist {
+        display: flex;
+
+        .bottomLeft {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 430px) {
+  .audioPageTop {
+    .right {
+      img {
+        width: 100%;
+      }
+    }
+    .left {
+      img {
+        width: 320px !important;
+        height: auto !important;
+      }
+    }
+  }
+  .middleContainer {
+    width: 400px;
+
+    .middle {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 400px !important;
+    }
+
+    .middleMusic {
+      width: 380px !important;
+    }
+  }
+}
+
+@media all and (max-width: 380px) {
+  .middleContainer {
+    width: 318px;
+    height: auto;
+    .audioPageTop {
+      .right {
+        width: 340px;
+      }
+      .left {
+        img {
+          width: 320px !important;
+        }
+      }
+    }
+
+    .middle {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 318px !important;
+    }
+    .middleMusic {
+      width: 318px !important;
+    }
+  }
+}
+
+@media all and (max-width: 330px) {
+  .audioPageMainContainer {
+    .audioPageBottom {
+      .left {
+        .favoriteModal {
+          top: 10%;
+          left: -3%;
+        }
+      }
+    }
+
+    width: 100%;
+    .middleContainer {
+      width: 318px;
+      height: auto;
+
+      .middle {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 300px !important;
+      }
+      .middleMusic {
+        width: 318px !important;
+      }
+    }
+    .audioPageTop {
+      .right {
+        width: 100% !important;
+        height: auto !important;
+        img {
+          height: auto !important;
+          width: 100% !important;
+        }
+      }
+      .left {
+        img {
+          height: auto !important;
+          width: 100% !important;
+        }
+      }
+    }
+
+    .middle {
+      width: 320px !important;
+    }
+
+    .middleContainer {
+      width: 320px !important;
+    }
+  }
+}

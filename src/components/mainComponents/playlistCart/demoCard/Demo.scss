@@ -1,0 +1,97 @@
+.demoCartContainer {
+  height: 170px;
+  width: 150px;
+  background-color: rgba(16, 16, 16, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+
+  .demoCartTextsTop {
+    width: 100%;
+    height: 30px;
+    display: flex;
+
+    align-items: center;
+    justify-content: space-around;
+
+    // h4 {
+    //   font-size: 15px;
+    // }
+    // .demoImg {
+    //   width: 15px !important;
+    //   height: 15px !important;
+    // }
+  }
+
+  .cartImg {
+    width: 110px !important;
+    height: auto !important;
+    box-shadow: 0px 2px 5px 0.3px rgb(255, 255, 255) !important;
+    border-radius: 10px;
+  }
+
+  .demoCartTextsBottom {
+    .first {
+      color: white;
+      font-size: 15px;
+      font-weight: bolder;
+      cursor: pointer;
+    }
+    .first:hover {
+      color: gray;
+    }
+    .second {
+      color: white;
+      font-size: 12px;
+      font-weight: 12px;
+      cursor: pointer;
+    }
+
+    .second:hover {
+      color: gray;
+    }
+
+    .buttons {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      // margin: 5px;
+      .add {
+        width: 19px;
+        height: auto;
+        background-color: greenyellow;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+
+      .add:hover {
+        background-color: rgb(108, 249, 0);
+      }
+      .delete {
+        width: 19px;
+        height: auto;
+        background-color: rgb(232, 77, 77);
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+      .delete:hover {
+        background-color: rgb(247, 76, 76);
+      }
+      .edit {
+        width: 19px;
+        height: auto;
+        background-color: greenyellow;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+      .edit:hover {
+        background-color: rgb(108, 249, 0);
+      }
+    }
+  }
+}

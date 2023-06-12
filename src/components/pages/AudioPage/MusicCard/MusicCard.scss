@@ -1,0 +1,136 @@
+.musicCard {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+
+  * {
+    font-size: 14px;
+  }
+
+  .musicCardLeft {
+    display: flex;
+    align-items: center;
+
+    margin-left: 20px;
+    width: 300px;
+    height: 100%;
+    img {
+      margin-left: 20px;
+      width: 70px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    p {
+      color: white;
+    }
+
+    span {
+      margin-left: 20px;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  .musicCardMiddle {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 100%;
+    span {
+      color: white;
+    }
+  }
+
+  .musicCardRight {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 100%;
+
+    .none {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .heart {
+      color: #27fd01;
+      filter: drop-shadow(0px 0px 4px#27fd01);
+    }
+
+    i {
+      margin-left: 15px;
+      color: white;
+    }
+    p {
+      color: white;
+      margin-left: 15px;
+    }
+  }
+}
+
+.musicCard:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 430px) {
+  .musicCard {
+    flex-direction: row;
+    height: auto;
+    flex-wrap: nowrap;
+  }
+
+  .musicCardLeft,
+  .musicCardMiddle,
+  .musicCardRight {
+    flex: 1;
+    height: auto;
+    margin: 10px;
+  }
+
+  .musicCardLeft {
+    margin-left: 0;
+    width: auto;
+
+    img {
+      margin-left: 0;
+      width: 30px !important;
+      height: auto;
+    }
+
+    p,
+    span {
+      text-overflow: ellipsis !important;
+      margin-left: 10px;
+      font-size: 12px;
+    }
+  }
+
+  .musicCardMiddle {
+    width: auto;
+
+    span {
+      font-size: 12px;
+    }
+  }
+
+  .musicCardRight {
+    width: auto;
+
+    .none {
+      display: none !important;
+    }
+
+    i {
+      margin-left: 2px;
+    }
+
+    p {
+      font-size: 10px;
+      margin-left: 2px;
+    }
+  }
+}

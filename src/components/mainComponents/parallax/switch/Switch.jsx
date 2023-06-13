@@ -1,8 +1,10 @@
 import React from "react";
 import "./Switch.scss";
 import { Link } from "react-router-dom";
+import { useProops } from "../../../context/ProopsContextProvider";
 
 const Switch = () => {
+  const { handleClick } = useProops();
   return (
     // <div className="switch">
     //   <input type="checkbox" />
@@ -18,7 +20,7 @@ const Switch = () => {
 
     <div class="switch">
       {/* <Link to="/musics"> */}
-      <input type="checkbox" name="toggle" />
+      <input type="checkbox" name="toggle" onClick={handleClick} />
       {/* </Link> */}
       <label for="toggle">
         <i class="bulb">

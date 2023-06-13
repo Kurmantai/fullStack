@@ -1,7 +1,7 @@
 import React from "react";
 import Plx from "react-plx";
 import "./Parallax.css";
-import Switch from "../switch/Switch";
+import Switch from "./switch/Switch";
 import { Link } from "react-router-dom";
 
 const Parallax = () => {

@@ -1,4 +1,5 @@
 import React from "react";
+
 import Parallax from "../../mainComponents/parallax/Parallax";
 import "./GreetingPage.scss";
 import { motion } from "framer-motion";

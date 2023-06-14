@@ -20,12 +20,6 @@ import AddMusic from "../../mainComponents/Modals/AddMusic";
 import { motion } from "framer-motion";
 import { Pagination } from "@mui/material";
 
-
-
-import Category from "../../mainComponents/Category/Category";
-import NextPage from "../../mainComponents/Pagination/Pagination";
-
-
 import Category from "../../mainComponents/Category/Category";
 import NextPage from "../../mainComponents/Pagination/Pagination";
 
@@ -128,7 +122,6 @@ const AudioPage = (item) => {
 
             <div className="addMusic"></div>
             <div className="middle">
-              <MusicCardMap />
               <div className="btnDiv">
                 <div></div>
                 <Button />

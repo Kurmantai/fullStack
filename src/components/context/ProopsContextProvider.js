@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from "react";
+import React, { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const proopsContext = createContext();
@@ -13,8 +13,17 @@ const ProopsContextProvider = ({ children }) => {
     }, 800);
   };
 
+  const [isLike, setIsLike] = useState(false);
+
+  function isLikeChange() {
+    setIsLike(!isLike);
+  }
+
   let values = {
     handleClick,
+
+    isLikeChange,
+    isLike,
   };
   return (
     <proopsContext.Provider value={values}>{children}</proopsContext.Provider>

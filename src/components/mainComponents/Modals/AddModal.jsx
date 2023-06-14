@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./AddModal.scss";
 import { useModals } from "../../context/ModalsContextProvider";
 
 const AddModal = () => {
-  const { setOpenModalAdd } = useModals();
+  const { openModalAdd, setOpenModalAdd } = useModals();
+
   return (
     <div className="addModalContainer">
       <h3>aDD Albom</h3>

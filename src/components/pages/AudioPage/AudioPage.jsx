@@ -19,8 +19,9 @@ import Favorites from "../../mainComponents/Modals/Favorites";
 import AddMusic from "../../mainComponents/Modals/AddMusic";
 import { motion } from "framer-motion";
 import { Pagination } from "@mui/material";
+import MusicCardMap from "./MusicCard/MusicCardMap";
 
-const AudioPage = () => {
+const AudioPage = (item) => {
   const {
     setOpenModalAdd,
     openModalAdd,
@@ -80,35 +81,12 @@ const AudioPage = () => {
                   <Favorites />
                 </div>
               )}
+
               <p>
                 <i>
                   <BsMusicNoteList />
                 </i>
-                TOP HIT 2023
-              </p>
-              <p>
-                <i>
-                  <BsMusicNoteList />
-                </i>
-                DANCE
-              </p>
-              <p>
-                <i>
-                  <BsMusicNoteList />
-                </i>
-                RELAX
-              </p>
-              <p>
-                <i>
-                  <BsMusicNoteList />
-                </i>
-                HIP HOP
-              </p>
-              <p>
-                <i>
-                  <BsMusicNoteList />
-                </i>
-                WORK OUT
+                {item.title}
               </p>
               <div className="favorite_btn">
                 <FavoritesBtn />
@@ -140,12 +118,7 @@ const AudioPage = () => {
 
             <div className="addMusic"></div>
             <div className="middle">
-              <MusicCard />
-              <MusicCard />
-              <MusicCard />
-              <MusicCard />
-              <MusicCard />
-              <MusicCard />
+              <MusicCardMap />
               <div className="btnDiv">
                 <div></div>
                 <Button />

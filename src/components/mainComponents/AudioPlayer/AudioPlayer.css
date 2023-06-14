@@ -14,18 +14,20 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  border-top: 0.1px solid #84848489;
   height: 100%;
   padding: var(--padding);
   color: var(--primary-color);
 }
 
 i {
-  color: var(--secondary-color);
+  /* color: var(--secondary-color); */
+  cursor: pointer;
 }
 
-i:hover {
+/* i:hover {
   color: var(--primary-color);
-}
+} */
 
 .song-bar {
   display: flex;
@@ -33,7 +35,7 @@ i:hover {
   align-items: center;
   justify-content: flex-start;
   gap: 1.5rem;
-  width: 28%;
+  width: 30%;
 }
 
 .song-infos {

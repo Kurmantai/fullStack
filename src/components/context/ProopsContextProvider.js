@@ -19,11 +19,20 @@ const ProopsContextProvider = ({ children }) => {
     setIsLike(!isLike);
   }
 
+  const [play, setPlay] = useState(false);
+
+  function isPlayPause() {
+    setPlay(!play);
+  }
+
   let values = {
+    isLike,
+    play,
     handleClick,
 
     isLikeChange,
-    isLike,
+    setPlay,
+    isPlayPause,
   };
   return (
     <proopsContext.Provider value={values}>{children}</proopsContext.Provider>

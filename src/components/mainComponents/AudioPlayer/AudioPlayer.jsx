@@ -11,7 +11,10 @@ import {
   FaPause,
   FaShareAlt,
 } from "react-icons/fa";
+import { useProops } from "../../context/ProopsContextProvider";
 const AudioPlayer = () => {
+  const { play, isPlayPause } = useProops();
+
   return (
     <div>
       <div class="music-player-container">
@@ -39,7 +42,7 @@ const AudioPlayer = () => {
                 <FaStepBackward />
               </i>
               <i class="play-pause fas fa-play">
-                <FaPlay />
+                <i onClick={isPlayPause}>{play ? <FaPause /> : <FaPlay />}</i>
               </i>
               <i class="fas fa-step-forward">
                 <FaStepForward />

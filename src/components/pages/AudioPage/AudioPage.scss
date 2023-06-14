@@ -64,7 +64,7 @@
       background: white;
       box-shadow: 0 25px 40px rgba(255, 255, 255, 0.377);
 
-      z-index: 100;
+      z-index: 50;
     }
   }
 
@@ -311,16 +311,24 @@
         margin: 5px 0;
         display: flex;
 
-        .topRight {
+        .top {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           margin-left: 5px;
         }
       }
-      .bottomPlaylist {
+      .bottom {
         display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-        .bottomLeft {
-          margin-right: 5px;
-        }
+      .pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 8.5px;
       }
     }
   }

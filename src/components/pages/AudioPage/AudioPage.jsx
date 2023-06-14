@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 import "./AudioPage.scss";
 import { BsMusicNoteList, BsFillVolumeMuteFill } from "react-icons/bs";
@@ -20,6 +20,8 @@ import AddMusic from "../../mainComponents/Modals/AddMusic";
 import { motion } from "framer-motion";
 import { Pagination } from "@mui/material";
 import MusicCardMap from "./MusicCard/MusicCardMap";
+import Category from "../../mainComponents/Category/Category";
+import NextPage from "../../mainComponents/Pagination/Pagination";
 
 const AudioPage = (item) => {
   const {
@@ -27,6 +29,7 @@ const AudioPage = (item) => {
     openModalAdd,
     openModalEdit,
     openModalFavorite,
+    setOpenModalFavorite,
     openModalMusicAdd,
   } = useModals();
 
@@ -50,6 +53,7 @@ const AudioPage = (item) => {
         filter: "blur(10px)",
         transition: { duration: 0.1, ease: "easeIn" },
       }}
+      onClick={() => setOpenModalAdd(false)}
     >
       {/* <div>
         <Navbar />
@@ -132,19 +136,20 @@ const AudioPage = (item) => {
             {openModalAdd && <AddModal />}
             {openModalEdit && <EditModal />}
             <div className="topPlaylist">
-              <div className="topLeft">
+              <div className="top">
+                <Demo />
                 <Demo />
               </div>
-              <div className="topRight">
-                <Demo />
-              </div>
+              {/* <div className="topRight"></div> */}
             </div>
             <div className="bottomPlaylist">
-              <div className="bottomLeft">
+              <div className="bottom">
+                <Demo />
                 <Demo />
               </div>
-              <div className="bottomRight">
-                <Demo />
+              {/* <div className="bottomRight"></div> */}
+              <div className="pagination">
+                <NextPage />
               </div>
             </div>
 

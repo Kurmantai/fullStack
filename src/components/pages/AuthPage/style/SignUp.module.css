@@ -1,0 +1,341 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+.registerBox {
+  width: 450px;
+  /* background-color: rgb(202, 220, 214); */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0px 32px;
+}
+.image img {
+  width: 30%;
+}
+.image {
+  text-align: center;
+}
+.registerBox h2 {
+  font-family: "Circular";
+  font-weight: bold;
+  text-align: center;
+  line-height: 36px;
+  letter-spacing: -0.06em;
+  margin-top: 40px;
+  font-size: 32px;
+  padding-bottom: 32px;
+}
+
+.btnFacebook {
+  width: 394px;
+  border: none;
+  background-color: #50659e;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  cursor: pointer;
+}
+.btnFacebook:hover {
+  scale: 1.02;
+  background-color: #3c528f;
+}
+.btnGoogle {
+  width: 394px;
+  border: none;
+  background-color: #ffffff;
+  border: 2px solid #000;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  cursor: pointer;
+}
+.btnGoogle:hover {
+  scale: 1.02;
+}
+.btnGoogle img {
+  width: 10%;
+  padding-right: 16px;
+}
+.registerBox a {
+  text-decoration: none;
+  margin: 0 auto;
+  padding-bottom: 22px;
+}
+.btnFacebook img {
+  width: 10%;
+  padding-right: 16px;
+}
+.btnFacebook p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+}
+
+.btnGoogle p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}
+.span {
+  display: table;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 2px;
+  margin: 0px auto 1em;
+  color: rgb(127, 127, 127);
+  position: relative;
+  text-align: center;
+  width: 85%;
+}
+.span::after {
+  border-top: 1px solid rgb(204, 204, 204);
+  content: "";
+  display: table-cell;
+  position: relative;
+  top: 0.8em;
+  width: 42%;
+}
+.span::before {
+  border-top: 1px solid rgb(204, 204, 204);
+  content: "";
+  display: table-cell;
+  position: relative;
+  top: 0.8em;
+  width: 42%;
+}
+.form h2 {
+  padding-block-end: 20px;
+  color: inherit;
+  font-weight: 700;
+  box-sizing: border-box;
+  margin-block: 0px;
+  font-size: 1.125rem;
+}
+.formGroup {
+  box-sizing: border-box;
+  padding-block-end: var(--spacer-1, 24px);
+}
+.LabelGroup {
+  box-sizing: border-box;
+  font-weight: 700;
+  font-family: "Circular";
+  align-items: center;
+  display: flex;
+  inline-size: 100%;
+  padding-block-end: var(--spacer--2, 8px);
+}
+
+.form input {
+  appearance: none;
+  background-image: none;
+  border: 0px;
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: box-shadow 0.1s ease-in-out 0s, color 0.1s ease-in-out 0s;
+  inline-size: 100%;
+  font-family: "Circular";
+  box-sizing: border-box;
+  margin-block: 0px;
+  padding-inline: 14px;
+  padding-block-start: var(--spacer--2, 8px);
+  padding-block-end: var(--spacer--2, 8px);
+  min-block-size: var(--control-size-md, 48px);
+  background-color: var(--background-base, #ffffff);
+  box-shadow: inset 0 0 0 1px var(--essential-subdued, #878787);
+  color: var(--text-base, #000000);
+}
+.form input:hover {
+  box-shadow: inset 0 0 0 1px var(--essential-negative, #e91429);
+}
+.help span {
+  box-sizing: border-box;
+  font-size: 0.875rem;
+  font-weight: 400;
+  display: flex;
+  margin-block-start: var(--spacer--2, 8px);
+  color: #d31225;
+  font-family: "Circular";
+  display: none;
+}
+
+.ButtonContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 24px;
+}
+.button {
+  box-sizing: border-box;
+  font-size: 1.125rem;
+  font-weight: 700;
+  background-color: #1ac455;
+  border-radius: 500px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  touch-action: manipulation;
+  border: none;
+  padding: 15px 30px;
+  min-inline-size: 0px;
+  align-self: center;
+}
+.button:hover {
+  scale: 1.02;
+  transition-duration: 33ms;
+  transform: translate3d(0px, 0px, 0px);
+  background-color: #1ac857;
+}
+
+.typeElement span {
+  font-family: "Circular";
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0 30%;
+}
+.typeElement a {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #1ac455;
+  padding-left: 5px;
+  text-decoration: underline;
+}
+.toastMsg {
+  position: absolute;
+  left: 8%;
+  top: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 0;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.toastMsg.active {
+  margin-top: 0.5rem;
+  opacity: 1;
+}
+
+.toastMsg p {
+  font-size: 0.8rem;
+  color: #ff654a;
+  margin-left: 0.3rem;
+}
+.toastMsg i {
+  font-size: 1rem;
+  color: #ff654a;
+}
+/*! Loading */
+.btnLoad {
+  font-weight: 700;
+  background-color: #1ac857;
+  border-radius: 500px;
+  cursor: pointer;
+
+  border: none;
+  padding: 20px 30px;
+}
+.wave {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ball {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: 0 3px;
+  background-color: #1df264;
+  animation: wave 1.2s cubic-bezier(0, 0, 0.82, 0.08) infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.ball:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.ball:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+.ball:nth-child(4) {
+  animation-delay: -0.6s;
+}
+
+.ball:nth-child(5) {
+  animation-delay: -0.8s;
+}
+
+/* responsive  */
+@media (max-width: 480px) {
+  .registerBox h2 {
+    width: 90%;
+    margin-top: 40px;
+    font-size: 26px;
+    margin: 40px auto 0 auto;
+  }
+  .registerBox {
+    width: 93%;
+  }
+  .registerBox a {
+    width: 90%;
+  }
+  .btnFacebook {
+    width: 100%;
+  }
+  .btnGoogle {
+    width: 100%;
+  }
+  .formGroup {
+    width: 100%;
+  }
+  .formGroup input {
+    width: 100%;
+  }
+  .form {
+    margin: 0 auto;
+  }
+
+  .typeElement span {
+    font-family: "Circular";
+    font-size: 0.9rem;
+    padding: 0 20%;
+  }
+  .typeElement a {
+    font-family: "Circular";
+    font-size: 0.9rem;
+  }
+  .form input {
+    font-size: 0.9rem;
+  }
+  .LabelGroup {
+    font-family: "Circular";
+    font-size: 0.9rem;
+  }
+  .button {
+    font-size: 1.06rem;
+  }
+}

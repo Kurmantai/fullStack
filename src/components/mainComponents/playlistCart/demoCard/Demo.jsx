@@ -1,9 +1,12 @@
 import React from "react";
 import "./Demo.scss";
 import { useModals } from "../../../context/ModalsContextProvider";
+import { useMusic } from "../../../context/MusicContextProvider";
 
-const Demo = () => {
+const Demo = (item) => {
   const { setOpenModalAdd, setOpenModalEdit } = useModals();
+  const { deleteAlbums } = useMusic();
+
   return (
     <div className="demoCartContainer">
       {/* <div className="demoCartTextsTop">
@@ -11,14 +14,10 @@ const Demo = () => {
         <img className="demoImg" src="./img/check.png" alt="img" />
       </div> */}
 
-      <img
-        className="cartImg"
-        src="https://st.europaplus.ru/mf/p/167560/singers/009/000941/singer-detail/5bda368cb6fabaceea716785fcd16b9b.jpg"
-        alt="img"
-      />
+      <img className="cartImg" src={item.image} alt="img" />
       <div className="demoCartTextsBottom">
-        <p className="first">Star Boy</p>
-        <p className="second">The Weeknd</p>
+        <p className="first">{item.title}</p>
+        <p className="second">{item.artist}</p>
         <div className="buttons">
           <button
             class="add"
@@ -28,7 +27,9 @@ const Demo = () => {
           >
             A
           </button>
-          <button class="delete">D</button>
+          <button onClick={() => deleteAlbums(item.id)} class="delete">
+            D
+          </button>
           <button
             class="edit"
             onClick={() => {

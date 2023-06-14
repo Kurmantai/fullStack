@@ -1,0 +1,406 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  /* overflow-y: hidden; */
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+  margin: 0;
+  padding: 0;
+}
+.wrapperLogIn {
+  /* width: 100vw; */
+  /* height: 100vh; */
+}
+
+.header div {
+  width: 93%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+.header img {
+  width: 120px;
+}
+
+.loginBox {
+  max-width: 734px;
+  /* width: 100%; */
+  background-color: rgb(8, 2, 2);
+  margin: 40px auto 0px auto;
+  /* height: 90%; */
+  padding-bottom: 120px;
+}
+
+.loginBox h1 {
+  text-align: center;
+  padding: 80px 0px 48px;
+  color: white;
+  font-size: 2.7rem;
+}
+.btnGoogle {
+  width: 324px;
+  border: 0.5px solid #dcdcdc;
+  background-color: transparent;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  margin-bottom: 8px;
+  padding: 15px 0;
+}
+.btnGoogle:hover {
+  border: 1.2px solid #fffdfd;
+  transition: 200ms ease-in 0s;
+}
+
+.btnFacebook {
+  background-color: transparent;
+  width: 324px;
+  border: 0.5px solid #dcdcdc;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  margin-bottom: 8px;
+  padding: 15px 0;
+}
+.btnGoogle img {
+  width: 12%;
+  padding-right: 16px;
+}
+.btnFacebook img {
+  width: 12%;
+  padding-right: 16px;
+}
+.btnFacebook p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  width: 60%;
+}
+.btnGoogle p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgb(255, 252, 252);
+  width: 60%;
+}
+.loginBox a {
+  text-decoration: none;
+}
+.btnBox {
+  display: flex;
+  width: 44%;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.btnFacebook:hover {
+  border: 1.2px solid #fffdfd;
+  transition: 200ms ease-in 0s;
+}
+.btnApple {
+  background-color: transparent;
+  width: 324px;
+  border: 0.5px solid #dcdcdc;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  margin-bottom: 8px;
+  padding: 15px 0;
+}
+.btnApple img {
+  width: 12%;
+  padding-right: 16px;
+}
+
+.btnApple:hover {
+  border: 1.2px solid #fffdfd;
+  transition: 200ms ease-in 0s;
+}
+.btnApple p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgb(255, 252, 252);
+  width: 60%;
+}
+.loginBox hr {
+  margin: 32px 100px;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  border-image: initial;
+  border-top: 1px solid rgb(41, 41, 41);
+}
+.form {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.formGroup {
+  box-sizing: border-box;
+  padding-block-end: var(--spacer-1, 24px);
+}
+.LabelGroup {
+  box-sizing: border-box;
+  font-weight: 700;
+  font-family: "Circular";
+  align-items: center;
+  display: flex;
+  inline-size: 100%;
+  padding-block-end: var(--spacer--2, 8px);
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.form input {
+  appearance: none;
+  background-image: none;
+  border: 0px;
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: box-shadow 0.1s ease-in-out 0s, color 0.1s ease-in-out 0s;
+  inline-size: 100%;
+  font-family: "Circular";
+  box-sizing: border-box;
+  margin-block: 0px;
+  padding-inline: 14px;
+  padding-block-start: var(--spacer--2, 8px);
+  padding-block-end: var(--spacer--2, 8px);
+  min-block-size: var(--control-size-md, 48px);
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px var(--essential-subdued, #878787);
+  color: #ffffff;
+}
+.form input:hover {
+  box-shadow: inset 0 0 0 1px var(--essential-negative, #ffffff);
+}
+.help span {
+  box-sizing: border-box;
+  font-size: 0.875rem;
+  font-weight: 400;
+  display: flex;
+  margin-block-start: var(--spacer--2, 8px);
+  color: #d31225;
+  font-family: "Circular";
+  display: none;
+}
+
+.ButtonContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 24px;
+}
+.button {
+  box-sizing: border-box;
+  font-size: 1.125rem;
+  font-weight: 700;
+  background-color: #1ac455;
+  border-radius: 500px;
+  cursor: pointer;
+
+  text-align: center;
+  border: none;
+  font-size: 15px;
+  padding: 15px 30px;
+}
+.button:hover {
+  scale: 1.03;
+  transition-duration: 33ms;
+  transform: translate3d(0px, 0px, 0px);
+  background-color: #1ac857;
+}
+
+.typeElement span {
+  font-family: "Circular";
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0 30%;
+  color: #6a6a6a;
+}
+.typeElement a {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #ffffff;
+  padding-left: 5px;
+  text-decoration: underline;
+}
+.button {
+  font-weight: 700;
+  background-color: #1ac857;
+  border-radius: 500px;
+  cursor: pointer;
+  width: 99%;
+  border: none;
+  padding: 15px 30px;
+}
+.forgotPaaasword {
+  margin: 0 auto;
+  width: 60%;
+}
+
+.forgotPaaasword a {
+  text-decoration: underline;
+  text-decoration-color: #ffffff;
+}
+.forgotLink button {
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+.passwordBlock {
+  position: relative;
+}
+.password {
+  background-color: transparent;
+  border: none;
+}
+.password img {
+  width: 25px;
+  top: 10px;
+  /* left: 3px; */
+  right: 10px;
+  position: absolute;
+}
+
+/* reset */
+
+.imgBox {
+  width: 15%;
+  margin: 25px auto;
+}
+.imgBox img {
+  height: 60px;
+  width: 200px;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.wrapper hr {
+  border: none;
+  height: 0.5px; /* Задаем высоту линии */
+  background-color: #979797;
+}
+.textBox {
+  width: 40%;
+  margin: 0 auto;
+}
+.textBox h1 {
+  padding-top: 30px;
+  width: 80%;
+  font-size: 48px;
+  line-height: 52px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.textBox p {
+  padding-top: 20px;
+  width: 77%;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: normal;
+  text-align: center;
+  color: black;
+  padding-block-end: 24px;
+  margin: 0 auto;
+}
+.fromP {
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+.fromP p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-transform: none;
+  letter-spacing: normal;
+  color: #000000;
+}
+.mainForm input {
+  appearance: none;
+  background-image: none;
+  border: 0px;
+  display: block;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  transition: box-shadow 0.1s ease-in-out 0s, color 0.1s ease-in-out 0s;
+  inline-size: 100%;
+  box-sizing: border-box;
+  margin-block: 0px;
+  border-radius: 4px;
+  padding: 14px;
+  background-color: var(--background-base, #ffffff);
+  box-shadow: inset 0 0 0 1px var(--essential-subdued, #878787);
+  color: var(--text-base, #000000);
+}
+.mainForm {
+  width: 30%;
+  margin: 0 auto;
+}
+.mainForm button {
+  background-color: #1ed760;
+  color: #000000;
+  border-radius: 500px;
+  font-size: inherit;
+  padding-block: 14px;
+  padding-inline: 32px;
+  border: none;
+  margin: 30px 38%;
+  cursor: pointer;
+}
+.wrapper span {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-transform: none;
+  letter-spacing: normal;
+  width: 30%;
+}
+.support {
+  width: 20%;
+  margin: 0 auto;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.ball:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.ball:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+.ball:nth-child(4) {
+  animation-delay: -0.6s;
+}
+
+.ball:nth-child(5) {
+  animation-delay: -0.8s;
+}

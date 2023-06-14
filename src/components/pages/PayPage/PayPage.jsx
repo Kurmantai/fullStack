@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./PayPage.scss";
 import { motion } from "framer-motion";
+import { NextPlan } from "@mui/icons-material";
+import NextPage from "../../mainComponents/Pagination/Pagination";
 
 const PayPage = () => {
   const [cardNumber, setCardNumber] = useState("");

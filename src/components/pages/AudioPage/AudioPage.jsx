@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 import "./AudioPage.scss";
 import { BsMusicNoteList, BsFillVolumeMuteFill } from "react-icons/bs";
@@ -20,6 +20,7 @@ import AddMusic from "../../mainComponents/Modals/AddMusic";
 import { motion } from "framer-motion";
 import { Pagination } from "@mui/material";
 import MusicCardMap from "./MusicCard/MusicCardMap";
+import Category from "../../mainComponents/Category/Category";
 
 const AudioPage = (item) => {
   const {
@@ -27,6 +28,7 @@ const AudioPage = (item) => {
     openModalAdd,
     openModalEdit,
     openModalFavorite,
+    setOpenModalFavorite,
     openModalMusicAdd,
   } = useModals();
 
@@ -50,6 +52,7 @@ const AudioPage = (item) => {
         filter: "blur(10px)",
         transition: { duration: 0.1, ease: "easeIn" },
       }}
+      onClick={() => setOpenModalAdd(false)}
     >
       {/* <div>
         <Navbar />

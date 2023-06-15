@@ -26,7 +26,6 @@ import { AlbumSharp } from "@mui/icons-material";
 import { useMusic } from "../../context/MusicContextProvider";
 
 const AudioPage = ({ item }) => {
-  // console.log(item);
   const {
     setOpenModalAdd,
     openModalAdd,

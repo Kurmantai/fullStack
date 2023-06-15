@@ -5,6 +5,7 @@ import "./MusicCard.scss";
 
 const MusicCard = ({ item }) => {
   // console.log(item);
+
   return (
     <div className="musicCard">
       <div className="musicCardLeft">

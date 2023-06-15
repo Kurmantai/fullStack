@@ -23,6 +23,7 @@ import React, { useState } from "react";
 import "./AddMusic.scss";
 import { useModals } from "../../context/ModalsContextProvider";
 import { useMusic } from "../../context/MusicContextProvider";
+
 import Category from "../Category/Category";
 
 const AddMusic = () => {

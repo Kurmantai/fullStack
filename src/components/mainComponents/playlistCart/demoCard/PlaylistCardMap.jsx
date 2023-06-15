@@ -9,6 +9,7 @@ const PlaylistCardMap = () => {
     getAlbums();
   }, []);
   // console.warn(albums);
+
   return (
     <div>
       {albums.map((item) => (

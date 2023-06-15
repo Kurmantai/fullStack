@@ -14,6 +14,7 @@ const MusicCardMap = () => {
     <div>
       {products.map((item, index) => (
         <MusicCard key={index} item={item} />
+
       ))}
     </div>
   );

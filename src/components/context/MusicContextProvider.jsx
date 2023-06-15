@@ -1,4 +1,4 @@
-// import axios from "axios";
+
 import axios from "axios";
 import React, { createContext, useContext, useReducer } from "react";
 import { useNavigate } from "react-router-dom";
@@ -8,7 +8,7 @@ import {
   API_PLAYLIST,
   API_ALBUMS,
 } from "./const";
-// const api1 = "http://localhost:8000/poster";
+
 
 export const musicContext = createContext();
 
@@ -22,6 +22,7 @@ const INIT_STATE = {
   albums: [],
   playlist: [],
   totalPage: 1,
+
 };
 
 function reducer(state = INIT_STATE, action) {
@@ -38,6 +39,7 @@ function reducer(state = INIT_STATE, action) {
       return { ...state, playlist: action.payload };
     case "GET_TOTAL_PAGE":
       return { ...state, totalPage: action.payload };
+
     default:
       return state;
   }
@@ -53,7 +55,7 @@ function getAuth() {
   };
   return confing;
 }
-// console.log(getAuth);
+
 
 const MusicContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
@@ -63,6 +65,7 @@ const MusicContextProvider = ({ children }) => {
     try {
       const confing = getAuth();
       const res = await axios.get(`${API_AUDIO_FILE}`, confing);
+
       dispatch({
         type: "GET_PRODUCTS",
         payload: res.data.results,
@@ -79,6 +82,7 @@ const MusicContextProvider = ({ children }) => {
       const confing = getAuth();
       const res = await axios.get(`${API_ALBUMS}`, confing);
       console.log(res.data - "albums");
+
       dispatch({
         type: "GET_ALBUMS",
         payload: res.data.results,
@@ -99,6 +103,7 @@ const MusicContextProvider = ({ children }) => {
       const confing = getAuth();
       const res = await axios.get(`${API_CATEGORIES}`, confing);
       console.log(res.data - "playList");
+
       dispatch({
         type: "GET_PLAY_LIST",
         payload: res.data.results,
@@ -147,6 +152,7 @@ const MusicContextProvider = ({ children }) => {
   async function getCategories() {
     try {
       const res = await axios(`${API_CATEGORIES}`);
+
       dispatch({
         type: "GET_CATEGORY",
         payload: res.data.results,
@@ -212,6 +218,7 @@ const MusicContextProvider = ({ children }) => {
     }
   }
 
+
   let values = {
     products: state.products,
     category: state.category,
@@ -220,6 +227,7 @@ const MusicContextProvider = ({ children }) => {
     playlist: state.playlist,
     totalPage: state.totalPage,
     addMusic,
+
     getPlaylist,
     getProducts,
     getCategories,
@@ -231,6 +239,7 @@ const MusicContextProvider = ({ children }) => {
     deleteAlbums,
     getAlbums,
     getCategoriesMusic,
+
   };
 
   return (

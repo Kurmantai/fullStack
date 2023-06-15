@@ -3,7 +3,6 @@ import "./Demo.scss";
 
 import { useModals } from "../../../context/ModalsContextProvider";
 import { useMusic } from "../../../context/MusicContextProvider";
-
 const Demo = ({ item }) => {
   const { getAlbums } = useMusic();
 
@@ -18,6 +17,7 @@ const Demo = ({ item }) => {
     <div className="demoCartContainer">
       <div className="demoCartTextsBottom">
         <img className="cartImg" src={item.image} alt="img" />
+
         <p className="first">{item.title}</p>
         <p className="second">{item.artist}</p>
         <div className="buttons">

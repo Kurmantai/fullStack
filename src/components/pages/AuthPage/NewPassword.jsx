@@ -43,6 +43,7 @@ const NewPassword = () => {
       };
 
       forgotPasswordComplate(obj);
+
     }
   }
   return (

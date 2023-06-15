@@ -1,3 +1,4 @@
+// import axios from "axios";
 import axios from "axios";
 import React, { createContext, useContext, useReducer } from "react";
 import { useNavigate } from "react-router-dom";
@@ -7,6 +8,7 @@ import {
   API_PLAYLIST,
   API_ALBUMS,
 } from "./const";
+// const api1 = "http://localhost:8000/poster";
 
 export const musicContext = createContext();
 
@@ -19,6 +21,7 @@ const INIT_STATE = {
   category: [],
   albums: [],
   playlist: [],
+  totalPage: 1,
 };
 
 function reducer(state = INIT_STATE, action) {
@@ -33,6 +36,8 @@ function reducer(state = INIT_STATE, action) {
       return { ...state, albums: action.payload };
     case "GET_PLAY_LIST":
       return { ...state, playlist: action.payload };
+    case "GET_TOTAL_PAGE":
+      return { ...state, totalPage: action.payload };
     default:
       return state;
   }
@@ -48,7 +53,7 @@ function getAuth() {
   };
   return confing;
 }
-console.log(getAuth);
+// console.log(getAuth);
 
 const MusicContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
@@ -57,7 +62,7 @@ const MusicContextProvider = ({ children }) => {
   const getProducts = async () => {
     try {
       const confing = getAuth();
-      const res = await axios(`${API_AUDIO_FILE}/`, confing);
+      const res = await axios.get(`${API_AUDIO_FILE}`, confing);
       dispatch({
         type: "GET_PRODUCTS",
         payload: res.data.results,
@@ -69,25 +74,31 @@ const MusicContextProvider = ({ children }) => {
 
   // ? get zapros na Albom
 
-  async function getAlbums() {
+  const getAlbums = async () => {
     try {
       const confing = getAuth();
       const res = await axios.get(`${API_ALBUMS}`, confing);
+      console.log(res.data - "albums");
       dispatch({
         type: "GET_ALBUMS",
         payload: res.data.results,
       });
+      dispatch({
+        type: "GET_TOTAL_PAGE",
+        payload: Math.ceil(res.data.count / 4),
+      });
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 
   //? get zapros na playlist
 
   async function getPlaylist() {
     try {
       const confing = getAuth();
-      const res = await axios.get(`${API_PLAYLIST}`, confing);
+      const res = await axios.get(`${API_CATEGORIES}`, confing);
+      console.log(res.data - "playList");
       dispatch({
         type: "GET_PLAY_LIST",
         payload: res.data.results,
@@ -135,7 +146,7 @@ const MusicContextProvider = ({ children }) => {
 
   async function getCategories() {
     try {
-      const res = await axios(`${API_CATEGORIES}/list/`);
+      const res = await axios(`${API_CATEGORIES}`);
       dispatch({
         type: "GET_CATEGORY",
         payload: res.data.results,
@@ -188,14 +199,27 @@ const MusicContextProvider = ({ children }) => {
     }
   }
 
+  async function getCategoriesMusic(id) {
+    try {
+      const res = await axios(`${API_AUDIO_FILE}${id}/`);
+      console.log(`${API_AUDIO_FILE}/${id}/`);
+      dispatch({
+        type: "GET_PRODUCTS",
+        payload: res.data.results,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   let values = {
     products: state.products,
     category: state.category,
     oneProduct: state.oneProduct,
     albums: state.albums,
     playlist: state.playlist,
+    totalPage: state.totalPage,
     addMusic,
-    getAlbums,
     getPlaylist,
     getProducts,
     getCategories,
@@ -205,6 +229,8 @@ const MusicContextProvider = ({ children }) => {
     editProduct,
     addAlbums,
     deleteAlbums,
+    getAlbums,
+    getCategoriesMusic,
   };
 
   return (

@@ -315,9 +315,11 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          flex-wrap: wrap;
           margin-left: 5px;
         }
       }
+
       .bottom {
         display: flex;
         align-items: center;

@@ -17,42 +17,42 @@ const AudioPlayer = () => {
 
   return (
     <div>
-      <div class="music-player-container">
-        <div class="music-player">
-          <div class="song-bar">
-            <div class="song-infos">
-              <div class="image-container">
+      <div className="music-player-container">
+        <div className="music-player">
+          <div className="song-bar">
+            <div className="song-infos">
+              <div className="image-container">
                 <img
                   src="https://d2y6mqrpjbqoe6.cloudfront.net/image/upload/f_auto,q_auto/media/library-400/216_636967437355378335Your_Lie_Small_hq.jpg"
                   alt=""
                 />
               </div>
-              <div class="song-description">
-                <p class="title">
+              <div className="song-description">
+                <p className="title">
                   Watashitachi wa Sou Yatte Ikite Iku Jinshu na no
                 </p>
-                <p class="artist">Masaru Yokoyama</p>
+                <p className="artist">Masaru Yokoyama</p>
               </div>
             </div>
           </div>
-          <div class="progress-controller">
-            <div class="control-buttons">
-              <i class="fas fa-random"></i>
-              <i class="fas fa-step-backward">
+          <div className="progress-controller">
+            <div className="control-buttons">
+              <i className="fas fa-random"></i>
+              <i className="fas fa-step-backward">
                 <FaStepBackward />
               </i>
-              <i class="play-pause fas fa-play">
+              <i className="play-pause fas fa-play">
                 <i onClick={isPlayPause}>{play ? <FaPause /> : <FaPlay />}</i>
               </i>
-              <i class="fas fa-step-forward">
+              <i className="fas fa-step-forward">
                 <FaStepForward />
               </i>
-              <i class="fas fa-undo-alt"></i>
+              <i className="fas fa-undo-alt"></i>
             </div>
-            <div class="progress-container">
+            <div className="progress-container">
               <span>0:49</span>
-              <div class="progress-bar">
-                <div class="progress"></div>
+              <div className="progress-bar">
+                <div className="progress"></div>
               </div>
               <span>3:15</span>
             </div>

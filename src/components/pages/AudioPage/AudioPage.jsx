@@ -22,8 +22,11 @@ import { Pagination } from "@mui/material";
 import MusicCardMap from "./MusicCard/MusicCardMap";
 import Category from "../../mainComponents/Category/Category";
 import NextPage from "../../mainComponents/Pagination/Pagination";
+import { AlbumSharp } from "@mui/icons-material";
+import { useMusic } from "../../context/MusicContextProvider";
 
-const AudioPage = (item) => {
+const AudioPage = ({ item }) => {
+  // console.log(item);
   const {
     setOpenModalAdd,
     openModalAdd,
@@ -32,6 +35,14 @@ const AudioPage = (item) => {
     setOpenModalFavorite,
     openModalMusicAdd,
   } = useModals();
+
+  const { albums, getAlbums, playlist, getPlaylist, getCategoriesMusic } =
+    useMusic();
+
+  useEffect(() => {
+    getAlbums();
+    getPlaylist();
+  }, []);
 
   return (
     <motion.div
@@ -87,10 +98,17 @@ const AudioPage = (item) => {
               )}
 
               <p>
-                <i>
-                  <BsMusicNoteList />
-                </i>
-                {item.title}
+                {playlist.map((item) => (
+                  <div
+                    style={{ display: "flex" }}
+                    onClick={() => getCategoriesMusic(item.slug)}
+                  >
+                    <i>
+                      <BsMusicNoteList />
+                    </i>
+                    <p>{item.title}</p>
+                  </div>
+                ))}
               </p>
               <div className="favorite_btn">
                 <FavoritesBtn />
@@ -135,19 +153,20 @@ const AudioPage = (item) => {
           <div className="right">
             {openModalAdd && <AddModal />}
             {openModalEdit && <EditModal />}
-            <div className="topPlaylist">
-              <div className="top">
-                <Demo />
-                <Demo />
+            {albums.map((item) => (
+              <div className="topPlaylist">
+                <div className="top">
+                  <Demo item={item} />
+                  <Demo item={item} />
+                  {/* <Demo />
+                  <Demo /> */}
+                </div>
+                {/* <div className="topRight"></div> */}
               </div>
-              {/* <div className="topRight"></div> */}
-            </div>
+            ))}
             <div className="bottomPlaylist">
-              <div className="bottom">
-                <Demo />
-                <Demo />
-              </div>
-              {/* <div className="bottomRight"></div> */}
+              <div className="bottom"></div>
+              <div className="bottomRight"></div>
               <div className="pagination">
                 <NextPage />
               </div>

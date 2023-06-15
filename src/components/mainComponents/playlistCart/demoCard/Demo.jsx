@@ -1,21 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Demo.scss";
+
 import { useModals } from "../../../context/ModalsContextProvider";
 import { useMusic } from "../../../context/MusicContextProvider";
 
-const Demo = (item) => {
+const Demo = ({ item }) => {
+  const { getAlbums } = useMusic();
+
+  useEffect(() => {
+    getAlbums();
+  }, []);
+
+  // console.log(item);
   const { setOpenModalAdd, setOpenModalEdit } = useModals();
   const { deleteAlbums } = useMusic();
-
   return (
     <div className="demoCartContainer">
-      {/* <div className="demoCartTextsTop">
-        <h4>Premium music</h4>
-        <img className="demoImg" src="./img/check.png" alt="img" />
-      </div> */}
-
-      <img className="cartImg" src={item.image} alt="img" />
       <div className="demoCartTextsBottom">
+        <img className="cartImg" src={item.image} alt="img" />
         <p className="first">{item.title}</p>
         <p className="second">{item.artist}</p>
         <div className="buttons">

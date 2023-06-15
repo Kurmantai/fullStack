@@ -29,13 +29,21 @@ const NewPassword = () => {
     ) {
       alert("заполните поля");
     } else {
-      let formData = new FormData();
-      formData.append("email", email);
-      formData.append("code", code);
-      formData.append("password", password);
-      formData.append("passwordConfirm", passwordConfirm);
+      // let formData = new FormData();
+      // formData.append("email", email);
+      // formData.append("code", code);
+      // formData.append("password", password);
+      // formData.append("passwordConfirm", passwordConfirm);
 
-      forgotPasswordComplate(formData);
+      let obj = {
+        email,
+        code,
+        password,
+        password_confirm: passwordConfirm,
+      };
+
+      forgotPasswordComplate(obj);
+
     }
   }
   return (

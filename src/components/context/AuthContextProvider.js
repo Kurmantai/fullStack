@@ -15,7 +15,7 @@ import {
 } from "../context/const";
 import axios from "axios";
 
-const authContext = createContext();
+export const authContext = createContext();
 
 export const useAuth = () => useContext(authContext);
 
@@ -75,7 +75,7 @@ const AuthContextProvider = ({ children }) => {
   };
   async function forgotPassword(email) {
     try {
-      await axios.post(API_FORGOT, { email });
+      await axios.post(API_FORGOT, { email: email });
       console.log(email);
       navigate("/newpass");
     } catch (error) {
@@ -84,7 +84,7 @@ const AuthContextProvider = ({ children }) => {
   }
   async function forgotPasswordComplate(user) {
     try {
-      await axios.post(API_FORGOT_ACC, { user });
+      await axios.post(API_FORGOT_ACC, user);
       console.log(user);
     } catch (error) {
       console.log(error);

@@ -12,8 +12,9 @@ const MusicCardMap = () => {
 
   return (
     <div>
-      {products.map((item) => (
-        <MusicCard key={item.id} item={item} />
+      {products.map((item, index) => (
+        <MusicCard key={index} item={item} />
+
       ))}
     </div>
   );

@@ -4,6 +4,8 @@ import { FaHeadphones, FaRegClock, FaRegHeart } from "react-icons/fa";
 import "./MusicCard.scss";
 
 const MusicCard = ({ item }) => {
+  // console.log(item);
+
   return (
     <div className="musicCard">
       <div className="musicCardLeft">

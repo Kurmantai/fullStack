@@ -6,9 +6,9 @@ import { useProops } from "../../../context/ProopsContextProvider";
 const Switch = () => {
   const { handleClick } = useProops();
   return (
-    // <div className="switch">
+    // <div classNameName="switch">
     //   <input type="checkbox" />
-    //   <label className="label"></label>
+    //   <label classNameName="label"></label>
     // </div>
     // <div id="toggleWrapper">
     //   <div>
@@ -18,27 +18,27 @@ const Switch = () => {
     //   </div>
     // </div>
 
-    <div class="switch">
+    <div className="switch">
       {/* <Link to="/musics"> */}
       <input type="checkbox" name="toggle" onClick={handleClick} />
       {/* </Link> */}
       <label for="toggle">
-        <i class="bulb">
-          <span class="bulb-center"></span>
-          <span class="filament-1"></span>
-          <span class="filament-2"></span>
-          <span class="reflections">
+        <i className="bulb">
+          <span className="bulb-center"></span>
+          <span className="filament-1"></span>
+          <span className="filament-2"></span>
+          <span className="reflections">
             <span></span>
           </span>
-          <span class="sparks">
-            <i class="spark1"></i>
-            <i class="spark2"></i>
-            <i class="spark3"></i>
-            <i class="spark4"></i>
-            <i class="spark5"></i>
-            <i class="spark6"></i>
-            <i class="spark7"></i>
-            <i class="spark8"></i>
+          <span className="sparks">
+            <i className="spark1"></i>
+            <i className="spark2"></i>
+            <i className="spark3"></i>
+            <i className="spark4"></i>
+            <i className="spark5"></i>
+            <i className="spark6"></i>
+            <i className="spark7"></i>
+            <i className="spark8"></i>
           </span>
         </i>
       </label>

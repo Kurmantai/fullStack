@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useMusic } from "../../../context/MusicContextProvider";
 import Demo from "./Demo";
 
 const PlaylistCardMap = () => {
-  const { albums } = useMusic();
+  const { albums, getAlbums } = useMusic();
+
+  useEffect(() => {
+    getAlbums();
+  }, []);
+  // console.warn(albums);
+
   return (
     <div>
       {albums.map((item) => (

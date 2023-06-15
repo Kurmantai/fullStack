@@ -6,14 +6,14 @@ const FavoritesBtn = () => {
   const { openModalFavorite, setOpenModalFavorite } = useModals();
   return (
     <button
-      class="favorites_button"
+      className="favorites_button"
       type="button"
       onClick={() => setOpenModalFavorite(!openModalFavorite)}
     >
-      <span class="favorites_button__line favorites_button__line--top"></span>
-      <span class="favorites_button__line favorites_button__line--right"></span>
-      <span class="favorites_button__line favorites_button__line--bottom"></span>
-      <span class="favorites_button__line favorites_button__line--left"></span>
+      <span className="favorites_button__line favorites_button__line--top"></span>
+      <span className="favorites_button__line favorites_button__line--right"></span>
+      <span className="favorites_button__line favorites_button__line--bottom"></span>
+      <span className="favorites_button__line favorites_button__line--left"></span>
       Favorites
     </button>
   );

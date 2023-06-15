@@ -1,4 +1,3 @@
-
 // import React from "react";
 // import "./AddModal.scss";
 // import { useModals } from "../../context/ModalsContextProvider";
@@ -22,15 +21,11 @@
 // export default AddModal;
 
 import React, { useState } from "react";
-
-
-
 import "./AddModal.scss";
 import { useModals } from "../../context/ModalsContextProvider";
 import { useMusic } from "../../context/MusicContextProvider";
 
 const AddModal = () => {
-
   const { setOpenModalAdd } = useModals();
   const { addAlbums } = useMusic();
   const [imageUrl, setImageUrl] = useState("");

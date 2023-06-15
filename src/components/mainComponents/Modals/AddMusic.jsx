@@ -22,7 +22,6 @@
 import React, { useState } from "react";
 import "./AddMusic.scss";
 import { useModals } from "../../context/ModalsContextProvider";
-
 import { useMusic } from "../../context/MusicContextProvider";
 
 import Category from "../Category/Category";
@@ -51,7 +50,6 @@ const AddMusic = () => {
 
   return (
     <div className="addMusicContainer">
-
       <h3>Добавить музыку</h3>
       <input
         type="text"
@@ -74,8 +72,6 @@ const AddMusic = () => {
       <button className="add" onClick={handleAddMusic}>
         Добавить
       </button>
-
-  
       <button className="back" onClick={() => setopenModalMusicAdd(false)}>
         Назад
       </button>

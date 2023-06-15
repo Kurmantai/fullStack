@@ -6,23 +6,23 @@ const Button = () => {
   const { openModalMusicAdd, setopenModalMusicAdd } = useModals();
   return (
     <div>
-      {/* <a class="button" href="">
-        <span class="button__line button__line--top"></span>
-        <span class="button__line button__line--right"></span>
-        <span class="button__line button__line--bottom"></span>
-        <span class="button__line button__line--left"></span>
+      {/* <a className="button" href="">
+        <span className="button__line button__line--top"></span>
+        <span className="button__line button__line--right"></span>
+        <span className="button__line button__line--bottom"></span>
+        <span className="button__line button__line--left"></span>
         Neon Link
       </a> */}
 
       <button
-        class="button"
+        className="button"
         type="button"
         onClick={() => setopenModalMusicAdd(!openModalMusicAdd)}
       >
-        <span class="button__line button__line--top"></span>
-        <span class="button__line button__line--right"></span>
-        <span class="button__line button__line--bottom"></span>
-        <span class="button__line button__line--left"></span>
+        <span className="button__line button__line--top"></span>
+        <span className="button__line button__line--right"></span>
+        <span className="button__line button__line--bottom"></span>
+        <span className="button__line button__line--left"></span>
         aDD Music
       </button>
     </div>
